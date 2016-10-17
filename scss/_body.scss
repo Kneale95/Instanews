@@ -1,0 +1,18 @@
+*{
+    box-shadow: border-box;
+}
+html{
+    font-size: 16px;
+    color: $white-text;
+    font-family:'open_sanslight';
+    body{
+        height: 90vh;
+        background-color: black;
+    }
+}
+img{
+    width:100%;
+}
+.feed{
+    max-width: 600px;
+}

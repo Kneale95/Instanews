@@ -1,0 +1,26 @@
+.categorySelector{
+ height: 90vh;
+ display:flex;
+ flex-wrap: wrap;
+ justify-content: center;
+ align-content: center;
+
+    .logo{
+    width: 300px;
+    text-align: center;
+    margin-bottom: 15px;
+    }
+}
+
+.categoryForm{
+    width:300px;
+    text-align: center;
+    
+    select{
+        font-size: 2rem;
+    }
+}
+.selectText{
+    margin-bottom: 15px;
+    font-size: .80rem;
+}
