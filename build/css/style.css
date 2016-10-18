@@ -39,10 +39,53 @@ html {
     background-color: black; }
 
 img {
+  max-width: 100%;
+  height: auto; }
+
+.feedgrid {
+  margin: 0 auto;
   width: 100%; }
 
-.feed {
-  max-width: 600px; }
+@media (min-width: 600px) {
+  .feed {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+
+.article {
+  max-width: 100%;
+  height: auto; }
+  @media (min-width: 600px) {
+    .article {
+      max-width: 50%;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%; } }
+  @media (min-width: 600px) and (min-width: 1000px) {
+    .article {
+      -ms-flex: 1 0 25%;
+          flex: 1 0 25%;
+      max-width: 25%; } }
+  .article .wrapper {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); }
+    .article .wrapper p {
+      font-size: 1rem;
+      line-height: 1.5rem; }
+
+.articleBackground {
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: end;
+      align-items: flex-end;
+  background-position: 50%; }
+
+a {
+  color: white;
+  text-decoration: none; }
 
 .categorySelector {
   height: 90vh;
@@ -52,27 +95,50 @@ img {
       flex-wrap: wrap;
   -ms-flex-pack: center;
       justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center; }
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column; }
+  @media (min-width: 600px) {
+    .categorySelector {
+      -ms-flex-direction: row;
+          flex-direction: row; } }
+  @media (min-width: 600px) and (min-width: 1000px) {
+    .categorySelector {
+      -ms-flex-pack: start;
+          justify-content: flex-start; } }
   .categorySelector .logo {
-    width: 300px;
     text-align: center;
     margin-bottom: 15px; }
 
 .categoryForm {
   width: 300px;
   text-align: center; }
-  .categoryForm select {
-    font-size: 2rem; }
+  @media (min-width: 600px) {
+    .categoryForm {
+      text-align: left;
+      margin-left: 60px; } }
+
+select {
+  font-size: 2rem; }
 
 .selectText {
   margin-bottom: 15px;
-  font-size: .80rem; }
+  font-size: 1rem; }
 
 footer {
   height: 10vh;
   text-align: center; }
+  @media (min-width: 1000px) {
+    footer {
+      text-align: left; } }
   footer .copyright {
-    font-size: .90rem;
-    font-family: 'open_sanslight';
-    color: #c2c2c2; }
+    font-size: .9rem;
+    color: #c2c2c2;
+    margin-top: 25px; }
+    @media (min-width: 1000px) {
+      footer .copyright {
+        margin-left: 25px; } }
+
+span {
+  font-family: 'open_sanslight'; }
