@@ -15,7 +15,9 @@
     "gulp-plumber": "^1.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
-    "gulp-uglify": "^2.0.0"
+    "gulp-uglify": "^2.0.0",
+    "jshint":"^2.9.3",
+    "isarray":"^2.0.1"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

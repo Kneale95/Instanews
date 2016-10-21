@@ -1,5 +1,5 @@
 $(function() {
-  
+
   //variables
   var articleData, articleItems, url,
       $articleList = $('.feed');
@@ -12,12 +12,12 @@ $("#locationChoice").change(function() {
     $(".categorySelector").height("40vh");
     $("transitionGif").show;
   // when the form is submitted
-    
-    
+
+
     // resets
     $articleList.empty();
     articleData, articleItems = '',
-      
+
     // get the search string
     url = "http://api.nytimes.com/svc/topstories/v2/" + articletype +".json?api-key=6fdb737964d44cbe838b45e9f1e7a3b3";
     // url += '?' + $.param({
@@ -68,8 +68,8 @@ $.each(filterData, function(key, value) {
 // if it fails
     .fail(function(err) {
     throw err;
- 
+
            });
-        
+
     });
 });
