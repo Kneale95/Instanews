@@ -64,8 +64,8 @@ $.each(filterData, function(key, value) {
 
 
 // if it fails
-    .fail(function(err) {
-    throw err;
+    .fail(function() {
+      $articleList.append('<li> Error, try again pls.');
 
            })
            .always(function() {
