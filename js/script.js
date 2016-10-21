@@ -4,13 +4,12 @@ $(function() {
   var articleData, articleItems, url,
       $articleList = $('.feed');
    var articletype = $('#locationChoice').val();
-$("transitionGif").hide;
 $("#locationChoice").change(function() {
     event.preventDefault();
   articletype = $(this).val().toLowerCase();
     $(".logo").height("20vh");
     $(".categorySelector").height("40vh");
-    $("transitionGif").show;
+    $(".transitionGif").css('display','block')
   // when the form is submitted
 
 
@@ -60,7 +59,6 @@ $.each(filterData, function(key, value) {
     });
 
     $articleList.append(articleItems);
-    $("transitionGif").hide;
 
     })
 
@@ -69,7 +67,10 @@ $.each(filterData, function(key, value) {
     .fail(function(err) {
     throw err;
 
-           });
+           })
+           .always(function() {
+  $('.transitionGif').css('display','none');
+})
 
     });
 });
