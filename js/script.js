@@ -1,23 +1,22 @@
 $(function() {
-  
+
   //variables
   var articleData, articleItems, url,
       $articleList = $('.feed');
    var articletype = $('#locationChoice').val();
-$("transitionGif").hide;
 $("#locationChoice").change(function() {
     event.preventDefault();
   articletype = $(this).val().toLowerCase();
     $(".logo").height("20vh");
     $(".categorySelector").height("40vh");
-    $("transitionGif").show;
+    $(".transitionGif").css('display','block')
   // when the form is submitted
-    
-    
+
+
     // resets
     $articleList.empty();
     articleData, articleItems = '',
-      
+
     // get the search string
     url = "http://api.nytimes.com/svc/topstories/v2/" + articletype +".json?api-key=6fdb737964d44cbe838b45e9f1e7a3b3";
     // url += '?' + $.param({
@@ -60,16 +59,18 @@ $.each(filterData, function(key, value) {
     });
 
     $articleList.append(articleItems);
-    $("transitionGif").hide;
 
     })
 
 
 // if it fails
-    .fail(function(err) {
-    throw err;
- 
-           });
-        
+    .fail(function() {
+      $articleList.append('<li> Error, try again pls.');
+
+           })
+           .always(function() {
+  $('.transitionGif').css('display','none');
+})
+
     });
 });

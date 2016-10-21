@@ -142,3 +142,11 @@ footer {
 
 span {
   font-family: 'open_sanslight'; }
+  
+.transitionGif {
+  display: none;
+height: 40px;
+width: 40px;
+margin-left: auto;
+margin-right: auto;
+}
